@@ -98,6 +98,70 @@
       // $personObj['thirdKey'] ??= 3;
 
       // var_dump($personObj);
+
+
+      // Conditionals
+
+      $name = "Ibrahim";
+
+      if ($name === "Ibrahim"){
+        echo 1;
+      }else{
+        echo 0;
+      }
+
+
+      echo $name ?: "Usman";
+
+
+      switch($name){
+        case "Usman":
+          echo 1;
+          break;
+
+        default:
+          echo 2;
+      }
+
+
+      // Loops
+
+      $counter = 0;
+      do{
+        echo $counter;
+        $counter++;
+      }
+      while ($counter < 10);
+
+
+      for ($counter = 0; $counter < 10; $counter++){
+        break;
+        continue;
+      }
+
+
+      foreach (['Usman', "Ibrahim"] as $index => $name){
+        echo $name;
+        echo $index;
+      }
+
+
+      // Functions
+
+      function hello(...$hello){
+
+        $str = implode("", $hello);
+        return "$str World";
+      }
+
+      echo hello('h', 'e', 'l', 'l', 'o');
+
+
+      $arrow = fn() => 
+        "<br>Hello World";
+      
+
+      echo $arrow();
     ?>
   </body>
 </html>
