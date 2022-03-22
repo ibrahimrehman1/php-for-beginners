@@ -7,8 +7,60 @@
     <title>PHP For Beginners</title>
   </head>
   <body>
-    <?php 
-      echo "Hello World";
+    <?php
+
+      //  Single - line comment
+      #   Single - line comment
+      /*  Multi-line
+          Comment
+      */
+
+
+      // Variables
+
+      $name = "Ibrahim Rehman";
+      $age = 20;
+      $height = 6.5;
+      $isMale = true;
+      $salary = null;
+      echo "Hello World"."<br>";
+      echo $name." ".$age." ".$isMale;
+
+      echo gettype($height);
+      var_dump($name);
+
+      echo is_string($name);
+      echo isset($addr);
+
+
+      define('e', 2.72); // constants
+      echo e;
+
+      echo PHP_INT_MAX;
+
+
+      // Numbers
+
+      echo '<br><br>';
+      $a = 1;
+
+      $b = 2.5;
+      $a++;
+      $a--;
+      ++$a;
+      --$a;
+      echo $a + 10;
+
+      echo is_float($a);
+
+      $b = (int)$b;
+      echo gettype($b);
+
+      // Some number functions are abs, pow, sqrt, min, max
+
+      echo '<br>';
+
+      echo number_format(123456, 0, ',', ' ');
     ?>
   </body>
 </html>
