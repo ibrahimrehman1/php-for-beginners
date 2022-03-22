@@ -1,11 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PHP For Beginners</title>
-  </head>
+  <?php require("partials/head.php"); ?>
   <body>
     <?php
 
@@ -102,66 +97,119 @@
 
       // Conditionals
 
-      $name = "Ibrahim";
+      // $name = "Ibrahim";
 
-      if ($name === "Ibrahim"){
-        echo 1;
-      }else{
-        echo 0;
-      }
-
-
-      echo $name ?: "Usman";
+      // if ($name === "Ibrahim"){
+      //   echo 1;
+      // }else{
+      //   echo 0;
+      // }
 
 
-      switch($name){
-        case "Usman":
-          echo 1;
-          break;
-
-        default:
-          echo 2;
-      }
+      // echo $name ?: "Usman";
 
 
-      // Loops
+      // switch($name){
+      //   case "Usman":
+      //     echo 1;
+      //     break;
 
-      $counter = 0;
-      do{
-        echo $counter;
-        $counter++;
-      }
-      while ($counter < 10);
-
-
-      for ($counter = 0; $counter < 10; $counter++){
-        break;
-        continue;
-      }
+      //   default:
+      //     echo 2;
+      // }
 
 
-      foreach (['Usman', "Ibrahim"] as $index => $name){
-        echo $name;
-        echo $index;
-      }
+      // // Loops
+
+      // $counter = 0;
+      // do{
+      //   echo $counter;
+      //   $counter++;
+      // }
+      // while ($counter < 10);
 
 
-      // Functions
-
-      function hello(...$hello){
-
-        $str = implode("", $hello);
-        return "$str World";
-      }
-
-      echo hello('h', 'e', 'l', 'l', 'o');
+      // for ($counter = 0; $counter < 10; $counter++){
+      //   break;
+      //   continue;
+      // }
 
 
-      $arrow = fn() => 
-        "<br>Hello World";
+      // foreach (['Usman', "Ibrahim"] as $index => $name){
+      //   echo $name;
+      //   echo $index;
+      // }
+
+
+      // // Functions
+
+      // function hello(...$hello){
+
+      //   $str = implode("", $hello);
+      //   return "$str World";
+      // }
+
+      // echo hello('h', 'e', 'l', 'l', 'o');
+
+
+      // $arrow = fn() => 
+      //   "<br>Hello World";
       
 
-      echo $arrow();
+      // echo $arrow();
+
+
+
+      // Dates
+
+      // echo date('Y-m-d H:i:s');
+      // echo time();
+
+
+
+      // File System
+
+      // mkdir("test");
+      // rename("test", "test2");
+      // rmdir("test2");
+      // echo file_get_contents("./partials/head.php");
+
+      // var_dump(scandir("./"));
+
+      // echo filesize("./partials/head.php");
+
+
+
+      // OOP 
+
+      // class Person extends Person{
+      //   public string $name;
+      //   private int $age;
+      //   protected float $height;
+      //   public static string $staticStr;
+
+      //   public function __construct($name, $age)
+      //   {
+      //     parent::__construct($name, $age);
+      //    $this->name = $name; 
+      //    $this->age = $age;
+      //    Person::$staticStr = "Ibrahim";
+      //   }
+      // }
+
+      // $p = new Person('Ibrahim', 10);
+
+
+
+      // CURL
+
+
+      $res = curl_init("https://my-json-server.typicode.com/typicode/demo/posts");
+
+      curl_setopt_array($res, [CURLOPT_RETURNTRANSFER=>true, CURLOPT_POST=>true, CURLOPT_HTTPHEADER=>['content-type: application/json'], CURLOPT_POSTFIELDS=>json_encode(["posts"=>[1, 2]])]);
+
+      $result = curl_exec($res);
+      echo $result;
     ?>
   </body>
 </html>
