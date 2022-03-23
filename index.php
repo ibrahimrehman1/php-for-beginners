@@ -1,215 +1,228 @@
 <!DOCTYPE html>
 <html lang="en">
-  <?php require("partials/head.php"); ?>
+  <?php require 'partials/head.php'; ?>
   <body>
     <?php
+    // namespace app;
+    //  Single - line comment
+    //  Single - line comment
 
-      //  Single - line comment
-      #   Single - line comment
-      /*  Multi-line
+    #   Single - line comment
+    /*  Multi-line
           Comment
       */
 
+    // Variables
 
-      // Variables
+    // $name = "Ibrahim Rehman";
+    // $age = 20;
+    // $height = 6.5;
+    // $isMale = true;
+    // $salary = null;
+    // echo "Hello World"."<br>";
+    // echo $name." ".$age." ".$isMale;
 
-      // $name = "Ibrahim Rehman";
-      // $age = 20;
-      // $height = 6.5;
-      // $isMale = true;
-      // $salary = null;
-      // echo "Hello World"."<br>";
-      // echo $name." ".$age." ".$isMale;
+    // echo gettype($height);
+    // var_dump($name);
 
-      // echo gettype($height);
-      // var_dump($name);
+    // echo is_string($name);
+    // echo isset($addr);
 
-      // echo is_string($name);
-      // echo isset($addr);
+    // define('e', 2.72); // constants
+    // echo e;
 
+    // echo PHP_INT_MAX;
 
-      // define('e', 2.72); // constants
-      // echo e;
+    // // Numbers
 
-      // echo PHP_INT_MAX;
+    // echo '<br><br>';
+    // $a = 1;
 
+    // $b = 2.5;
+    // $a++;
+    // $a--;
+    // ++$a;
+    // --$a;
+    // echo $a + 10;
 
-      // // Numbers
+    // echo is_float($a);
 
-      // echo '<br><br>';
-      // $a = 1;
+    // $b = (int)$b;
+    // echo gettype($b);
 
-      // $b = 2.5;
-      // $a++;
-      // $a--;
-      // ++$a;
-      // --$a;
-      // echo $a + 10;
+    // // Some number functions are abs, pow, sqrt, min, max
 
-      // echo is_float($a);
+    // echo '<br>';
 
-      // $b = (int)$b;
-      // echo gettype($b);
+    // echo number_format(123456, 0, ',', ' ');
 
-      // // Some number functions are abs, pow, sqrt, min, max
+    // strings
 
-      // echo '<br>';
+    // $name = "Ibrahim Rehman";
+    // echo substr($name, 0, 5);
 
-      // echo number_format(123456, 0, ',', ' ');
+    // $longText = "<h1>Hello</h1>
+    // World
+    // Hi ";
 
+    // echo nl2br(htmlentities($longText)); // preserves html code and line breaks
 
-      // strings
+    // arrays
 
-      // $name = "Ibrahim Rehman";
-      // echo substr($name, 0, 5);
+    // $fruits = ['Banana', "Orange"];
+    // $name = 'Hello World';
+    // $fruits[] = 'Apple';
+    // array_push($fruits, 'Watermelon');
+    // var_dump($fruits);
 
-      // $longText = "<h1>Hello</h1>
-      // World
-      // Hi ";
+    // echo implode(', ', $fruits);
 
-      // echo nl2br(htmlentities($longText)); // preserves html code and line breaks
+    // var_dump(explode(' ', $name));
 
-      // arrays
+    // Associative Arrays i.e. objects in PHP
 
-      // $fruits = ['Banana', "Orange"];
-      // $name = 'Hello World';
-      // $fruits[] = 'Apple';
-      // array_push($fruits, 'Watermelon');
-      // var_dump($fruits);
+    // $personObj = ["firstKey" => 1, "secondKey" => 2];
 
-      // echo implode(', ', $fruits);
+    // echo $personObj['firstKey'];
 
-      // var_dump(explode(' ', $name));
+    // $personObj['thirdKey'] ??= 3;
 
+    // var_dump($personObj);
 
+    // Conditionals
 
-      // Associative Arrays i.e. objects in PHP 
+    // $name = "Ibrahim";
 
-      // $personObj = ["firstKey" => 1, "secondKey" => 2];
+    // if ($name === "Ibrahim"){
+    //   echo 1;
+    // }else{
+    //   echo 0;
+    // }
 
-      // echo $personObj['firstKey'];
+    // echo $name ?: "Usman";
 
+    // switch($name){
+    //   case "Usman":
+    //     echo 1;
+    //     break;
 
-      // $personObj['thirdKey'] ??= 3;
+    //   default:
+    //     echo 2;
+    // }
 
-      // var_dump($personObj);
+    // // Loops
 
+    // $counter = 0;
+    // do{
+    //   echo $counter;
+    //   $counter++;
+    // }
+    // while ($counter < 10);
 
-      // Conditionals
+    // for ($counter = 0; $counter <body 10; $counter++){
+    //   break;
+    //   continue;
+    // }
 
-      // $name = "Ibrahim";
+    // foreach (['Usman', "Ibrahim"] as $index => $name){
+    //   echo $name;
+    //   echo $index;
+    // }
 
-      // if ($name === "Ibrahim"){
-      //   echo 1;
-      // }else{
-      //   echo 0;
-      // }
+    // // Functions
 
+    // function hello(...$hello){
 
-      // echo $name ?: "Usman";
+    //   $str = implode("", $hello);
+    //   return "$str World";
+    // }
 
+    // echo hello('h', 'e', 'l', 'l', 'o');
 
-      // switch($name){
-      //   case "Usman":
-      //     echo 1;
-      //     break;
+    // $arrow = fn() =>
+    //   "<br>Hello World";
 
-      //   default:
-      //     echo 2;
-      // }
+    // echo $arrow();
 
+    // Dates
 
-      // // Loops
+    // echo date('Y-m-d H:i:s');
+    // echo time();
 
-      // $counter = 0;
-      // do{
-      //   echo $counter;
-      //   $counter++;
-      // }
-      // while ($counter < 10);
+    // File System
 
+    // mkdir("test");
+    // rename("test", "test2");
+    // rmdir("test2");
+    // echo file_get_contents("./partials/head.php");
 
-      // for ($counter = 0; $counter < 10; $counter++){
-      //   break;
-      //   continue;
-      // }
+    // var_dump(scandir("./"));
 
+    // echo filesize("./partials/head.php");
 
-      // foreach (['Usman', "Ibrahim"] as $index => $name){
-      //   echo $name;
-      //   echo $index;
-      // }
+    // OOP
 
+    // class Person extends Person{
+    //   public string $name;
+    //   private int $age;
+    //   protected float $height;
+    //   public static string $staticStr;
 
-      // // Functions
+    //   public function __construct($name, $age)
+    //   {
+    //     parent::__construct($name, $age);
+    //    $this->name = $name;
+    //    $this->age = $age;
+    //    Person::$staticStr = "Ibrahim";
+    //   }
+    // }
 
-      // function hello(...$hello){
+    // $p = new Person('Ibrahim', 10);
 
-      //   $str = implode("", $hello);
-      //   return "$str World";
-      // }
+    // CURL
 
-      // echo hello('h', 'e', 'l', 'l', 'o');
+    // $res = curl_init('https://my-json-server.typicode.com/typicode/demo/posts');
 
+    // curl_setopt_array($res, [
+    //     CURLOPT_RETURNTRANSFER => true,
+    //     CURLOPT_POST => true,
+    //     CURLOPT_HTTPHEADER => ['content-type: application/json'],
+    //     CURLOPT_POSTFIELDS => json_encode(['posts' => [1, 2]]),
+    // ]);
 
-      // $arrow = fn() => 
-      //   "<br>Hello World";
-      
+    // $result = curl_exec($res);
+    // echo $result;
 
-      // echo $arrow();
+    // Connecting to MySQL
 
+    $pdo = new PDO(
+        'mysql:host=localhost;port=3306;dbname=mydatabase',
+        'root',
+        ''
+    );
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
+    var_dump($_SERVER);
 
-      // Dates
+    // if ($_SERVER["REQUEST_METHOD"] === "POST"){
+    //   $title = $_POST['title'];
 
-      // echo date('Y-m-d H:i:s');
-      // echo time();
+    //   $statement = $pdo->prepare("INSERT INTO videos VALUES (:title)");
+    //   $statement->bindValue(":title", $title);
 
+    // }
 
+    // move_uploaded_file();
 
-      // File System
+    // header('Location: index.php');
 
-      // mkdir("test");
-      // rename("test", "test2");
-      // rmdir("test2");
-      // echo file_get_contents("./partials/head.php");
+    $statement = $pdo->prepare('SELECT * FROM videos');
+    $statement->execute();
+    $videos = $statement->fetchAll(PDO::FETCH_ASSOC);
 
-      // var_dump(scandir("./"));
+    var_dump($videos);
 
-      // echo filesize("./partials/head.php");
-
-
-
-      // OOP 
-
-      // class Person extends Person{
-      //   public string $name;
-      //   private int $age;
-      //   protected float $height;
-      //   public static string $staticStr;
-
-      //   public function __construct($name, $age)
-      //   {
-      //     parent::__construct($name, $age);
-      //    $this->name = $name; 
-      //    $this->age = $age;
-      //    Person::$staticStr = "Ibrahim";
-      //   }
-      // }
-
-      // $p = new Person('Ibrahim', 10);
-
-
-
-      // CURL
-
-
-      $res = curl_init("https://my-json-server.typicode.com/typicode/demo/posts");
-
-      curl_setopt_array($res, [CURLOPT_RETURNTRANSFER=>true, CURLOPT_POST=>true, CURLOPT_HTTPHEADER=>['content-type: application/json'], CURLOPT_POSTFIELDS=>json_encode(["posts"=>[1, 2]])]);
-
-      $result = curl_exec($res);
-      echo $result;
-    ?>
+// /** @var $pdo \PDO */
+?>
   </body>
 </html>
