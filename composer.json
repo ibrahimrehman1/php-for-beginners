@@ -1,0 +1,17 @@
+{
+  "name": "ok/phpforbeginners",
+  "autoload": {
+    "psr-4": {
+      "app\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Ibrahim Rehman",
+      "email": "ibrahimrehman0346@gmail.com"
+    }
+  ],
+  "require": {
+    "guzzlehttp/guzzle": "^7.4"
+  }
+}
